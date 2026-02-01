@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: stg_transactions
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+
+      - name: customer_id
+        tests:
+          - not_null
+
+      - name: product_id
+        tests:
+          - not_null
+
+      - name: country
+        tests:
+          - accepted_values:
+              values:
+                - Australia
+                - Austria
+                - Bahrain
+                - Belgium
+                - Brazil
+                - Canada
+                - Channel Islands
+                - Cyprus
+                - Denmark
+                - EIRE
+                - Finland
+                - France
+                - Germany
+                - Greece
+                - Iceland
+                - Israel
+                - Italy
+                - Japan
+                - Korea
+                - Lithuania
+                - Malta
+                - Netherlands
+                - Nigeria
+                - Norway
+                - Poland
+                - Portugal
+                - RSA
+                - Singapore
+                - Spain
+                - Sweden
+                - Switzerland
+                - Thailand
+                - USA
+                - United Arab Emirates
+                - United Kingdom
+                - Unspecified
+                - West Indies

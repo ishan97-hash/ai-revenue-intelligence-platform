@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: raw
+    database: ai-revenue-platform
+    schema: ai_revenue_dw
+    config:
+      freshness:
+        warn_after: {count: 24, period: hour}
+        error_after: {count: 72, period: hour}
+    tables:
+      - name: bronze_transactions
+        columns:
+          - name: Invoice
+            tests: [not_null]
+          - name: StockCode
+            tests: [not_null]
+          - name: Customer ID
+      - name: bronze_reviews
+        columns:
+          - name: product_id
+          - name: review_text

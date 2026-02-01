@@ -1,0 +1,6 @@
+docs/
+*.tfstate
+*.tfstate.backup
+.terraform/
+*.json
+*.key
